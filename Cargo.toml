@@ -1,0 +1,35 @@
+[package]
+name = "watchso"
+version = "0.1.0"
+authors = ["Acheron <acheroncrypto@gmail.com>"]
+description = "Hot reload Solana programs"
+edition = "2021"
+repository = "https://github.com/acheroncrypto/watchso"
+homepage = "https://github.com/acheroncrypto/watchso"
+license = "Apache-2.0"
+readme = "README.md"
+keywords = ["watch", "hot", "reloading", "solana", "development"]
+categories = ["command-line-utilities", "development-tools", "filesystem"]
+
+[[bin]]
+name = "watchso"
+path = "src/bin/main.rs"
+
+[lib]
+path = "src/lib/lib.rs"
+
+[dependencies]
+async-recursion = "1.0.2"
+async-trait = "0.1.64"
+cargo_toml = "0.15.2"
+console = "0.15.5"
+globset = "0.4.10"
+indicatif = "0.17.3"
+lazy_static = "1.4.0"
+miette = { version = "5.5.0", features = ["fancy"] }
+regex = "1.7.1"
+thiserror = "1.0.38"
+tokio = "1.25.0"
+toml = "0.7.2"
+watchexec = "2.1.1"
+watchexec-filterer-globset = "1.1.0"
